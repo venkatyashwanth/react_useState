@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Myfunction from './components/Myfunction';
+import Counter from './components/Counter';
+import Log from './components/Log';
 
 function App() {
+  const arr = ['venkat','krishna','vishnu'];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2 className="mainText">React Application</h2>
+      <p>Passing the properties to the functional component: </p>
+      <Myfunction myarr = {arr}/>
+      <hr/>
+      <Counter/>
+      <hr/>
+      <h2>Conditional Rendering</h2>
+      <Log/>
     </div>
   );
 }
-
 export default App;
